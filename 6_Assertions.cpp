@@ -112,6 +112,36 @@ TEST_F(DISABLED_SampleTest, Sample5) {
 
 }
 
+// 6. 구글 테스트가 제공하는 실행 옵션
+//  1) --gtest_filter
+//    : 선택적으로 테스트를 수행할 수 있는 기능을 제공합니다.
+//      $ ./a.out --gtest_filter=*.P_*
+//  2) 반복 테스트
+//      $ ./a.out --gtest_repeat=N --gtest_break_on_failure --gtest_shuffle
+
+// CalcTest.AddTest
+TEST(CalcTest, P_AddTest) {
+	// FAIL();
+}
+
+// CalcTest.SubTest
+TEST(CalcTest, N_SubTest) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
