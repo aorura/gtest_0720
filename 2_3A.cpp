@@ -21,14 +21,19 @@ public:
 
 #include <gtest/gtest.h>
 
+// TDD(테스트 주도 개발) -> BDD(행위 주도 개발)
+//                          1) 용어
+//                          2) 행위 검증
+
+
 // TestSuite 이름
 //  - 테스트 대상 클래스의 이름의 마지막에 Test 또는 Spec를 붙이는 형태로 만든다.
 //  => CalculatorTest / CalculatorSpec
 
 // TestCase를 구성하는 방법 - 3A
-// 1. Arrange: 테스트 하고자는 클래스의 객체를 생성하고, 필요한 경우 설정하고 준비한다.
-// 2. Act: 객체에 작용을 가한다.
-// 3. Assert: 기대하는 바를 단언한다.
+// 1. Arrange: 테스트 하고자는 클래스의 객체를 생성하고, 필요한 경우 설정하고 준비한다.(Given)
+// 2. Act: 객체에 작용을 가한다. (When)
+// 3. Assert: 기대하는 바를 단언한다. (Then)
 
 // TestCase 품질
 //  : 커버리지 - 테스트 코드에 의해서 제품 코드가 실행된 비율
@@ -36,7 +41,27 @@ public:
 //  2) 유지보수성
 //  3) 신뢰성
 
+#define SPEC(msg) printf(msg)
 
+// ex1) 테스트 케이스 이름
+//     테스트대상메소드_동작_기대값
+TEST(CalculatorTest, Plus_AddingTwoPlusTwo_DisplaysFour) {
+	SPEC("2 더하기 2 하였을 때 Display가 4를 반환하는지를 검증한다.\n");
+	// Arrange
+	Calculator* calc = new Calculator;
+	
+	// Act
+	calc->Enter(2);
+	calc->PressPlus();
+	calc->Enter(2);
+	calc->PressEquals();
+
+	// Assert
+	ASSERT_EQ(calc->Display(), 4) << "2 + 2 하였을 때";
+}
+
+
+// * 테스트케이스의 이름에서 테스트의 시나리오가 드러날 수 있도록 작성하는 것이 좋습니다.
 TEST(CalculatorTest, PlusTest2) {
 	// Arrange
 	Calculator* calc = new Calculator;
@@ -72,10 +97,3 @@ TEST(CalculatorTest, PlusTest) {
 		FAIL();
 	}
 }
-
-
-
-
-
-
-
