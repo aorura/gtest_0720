@@ -40,6 +40,26 @@ public:
 //     테스트를 수행하는 개발자의 생산성을 떨어뜨린다.
 //    => Suite Fixture SetUp / TearDown
 //    => xUnit Test Framework이 제공하는 기능입니다.
+//    - 공유 픽스쳐 전략
+//      : 이제는 TestSuite 안의 모든 TestCase는 독립적이지 않습니다.
+//        이로 인해서, "변덕스러운 테스트"의 문제가 발생할 수 있습니다.
+//        공유 픽스쳐의 상태에 따라서, 테스트의 신뢰성이 사라질 수 있다.
+//      => 하나의 TestSuite 클래스안에서 너무 많은 TestCase를 두는 것이 좋지 않다.
+
+
+// TestSuite
+//   TC-30
+// => TestSuite 클래스를 분리한다.
+
+// TestSuite1
+//   TC-15
+// TestSuite2
+// 	 TC-15
+// 	     TestSuite3
+// 	        TC-8
+// 	     TestSuite4
+// 	        TC-7
+
 
 // Suite SetUp(); - static
 // TestSuite* ts = new TestSuite;
