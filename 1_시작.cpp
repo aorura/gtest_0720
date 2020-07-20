@@ -13,6 +13,7 @@
 
 
 // 1. 구글 테스트에서 테스트를 작성하는 방법.
+//  - TEST(테스트 스위트 이름, 테스트 케이스 이름)
 TEST(TestSuiteName, TestCase1) {
 	FAIL();
 }
