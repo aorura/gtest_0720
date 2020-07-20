@@ -16,3 +16,13 @@ $ ar rcv libgtest.a gtest-all.o
 $ g++ main.cpp -lgtest -L. -Igoogletest/googletest/include/ -pthread
 
 ```
+
+# Google Test 라이브러리 빌드 방법 - 2
+```
+$ cd ./googletest/googletest/scripts
+$ ./fuse_gtest_files.py ~/chansik.yun/
+$ cd ~/chansik.yun
+$ g++ ./gtest/gtest-all.cc -c -I.
+$ ar rcv libgtest.a gtest-all.o
+$ g++ main.cpp -lgtest -L. -I. -pthread
+```
