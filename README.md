@@ -29,3 +29,20 @@ $ ar rcv libgtest.a gtest-all.o gtest_main.o
 $ g++ main.cpp -lgtest -L. -I. -pthread
 ```
 만약 이전의 컴파일러(GCC 4.7 이전)의 경우, 컴파일시 -std=c++14 or -std=c++11 옵션이 추가되어야 합니다.
+
+- 동적 라이브러리 빌드한 경우, 라이브러리가 실행 파일이 실행되는 시점에 로드되기 때문에, 라이브러리의 경로 지정이 필요하다.
+```
+  # Linux: LD_LIBRARY_PATH
+  # Windows: 내 컴퓨터 - 고급 시스템 설정 - 고급 - 환경 변수 - Path 
+
+  $ LD_LIBRARY_PATH=./googletest/bazel-bin ./a.out
+  # or
+  $ export LD_LIBRARY_PATH=./googletest/bazel-bin
+  $ ./a.out
+
+```
+
+
+
+
+
