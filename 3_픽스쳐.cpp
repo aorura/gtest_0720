@@ -42,7 +42,7 @@ public:
 //       |
 //  CalculatorTest
 //       |
-//  TEST_F(CalculatorTest, foo)
+// TEST_F(CalculatorTest, foo)
 
 #if 1
 // 명시적으로 Test Suite 클래스를 만드는 방법.
