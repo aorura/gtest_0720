@@ -23,7 +23,9 @@ $ cd ./googletest/googletest/scripts
 $ ./fuse_gtest_files.py ~/chansik.yun/
 $ cd ~/chansik.yun
 $ g++ ./gtest/gtest-all.cc -c -I.
-$ ar rcv libgtest.a gtest-all.o
+$ g++ googletest/googletest/src/gtest_main.cc -c -I.
+$ ar rcv libgtest.a gtest-all.o gtest_main.o
+
 $ g++ main.cpp -lgtest -L. -I. -pthread
 ```
 만약 이전의 컴파일러(GCC 4.7 이전)의 경우, 컴파일시 -std=c++14 or -std=c++11 옵션이 추가되어야 합니다.
