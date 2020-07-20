@@ -87,6 +87,7 @@ class TerminalTest : public testing::Test {
 protected:
 	static Terminal* terminal;
 
+	// static void SetUpTestCase() {}   // 1.10 이전
 	static void SetUpTestSuite() {
 		printf("SetUpTestSuite()\n");
 		terminal = new Terminal;
