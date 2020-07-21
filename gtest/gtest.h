@@ -13526,7 +13526,6 @@ class GTEST_API_ TestEventListeners {
     return default_result_printer_;
   }
 
-  // Returns the standard listener responsible for the default XML output
   // controlled by the --gtest_output=xml flag.  Can be removed from the
   // listeners list by users who want to shut down the default XML output
   // controlled by this flag and substitute it with custom one.  Note that
