@@ -1,0 +1,123 @@
+{
+  "tests": 8,
+  "failures": 0,
+  "disabled": 3,
+  "errors": 0,
+  "timestamp": "2020-07-21T00:05:36Z",
+  "time": "0.001s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "GoogleTest",
+      "tests": 4,
+      "failures": 0,
+      "disabled": 1,
+      "errors": 0,
+      "timestamp": "2020-07-21T00:05:36Z",
+      "time": "0.001s",
+      "testsuite": [
+        {
+          "name": "DISABLED_Sample1",
+          "status": "NOTRUN",
+          "result": "SUPPRESSED",
+          "timestamp": "1970-01-01T00:00:00Z",
+          "time": "0s",
+          "classname": "GoogleTest"
+        },
+        {
+          "name": "Sample3",
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2020-07-21T00:05:36Z",
+          "time": "0s",
+          "classname": "GoogleTest"
+        },
+        {
+          "name": "Sample4_Good",
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2020-07-21T00:05:36Z",
+          "time": "0.001s",
+          "classname": "GoogleTest"
+        },
+        {
+          "name": "Sample4",
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2020-07-21T00:05:36Z",
+          "time": "0s",
+          "classname": "GoogleTest"
+        }
+      ]
+    },
+    {
+      "name": "DISABLED_GoogleTest",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 1,
+      "errors": 0,
+      "timestamp": "1970-01-01T00:00:00Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "Sample2",
+          "status": "NOTRUN",
+          "result": "SUPPRESSED",
+          "timestamp": "1970-01-01T00:00:00Z",
+          "time": "0s",
+          "classname": "DISABLED_GoogleTest"
+        }
+      ]
+    },
+    {
+      "name": "DISABLED_SampleTest",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 1,
+      "errors": 0,
+      "timestamp": "1970-01-01T00:00:00Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "Sample5",
+          "status": "NOTRUN",
+          "result": "SUPPRESSED",
+          "timestamp": "1970-01-01T00:00:00Z",
+          "time": "0s",
+          "classname": "DISABLED_SampleTest"
+        }
+      ]
+    },
+    {
+      "name": "CalcTest",
+      "tests": 2,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2020-07-21T00:05:36Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "P_AddTest",
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2020-07-21T00:05:36Z",
+          "time": "0s",
+          "classname": "CalcTest",
+          "cpu": "80",
+          "mem": "20%"
+        },
+        {
+          "name": "N_SubTest",
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2020-07-21T00:05:36Z",
+          "time": "0s",
+          "classname": "CalcTest",
+          "cpu": "10",
+          "mem": "40%"
+        }
+      ]
+    }
+  ]
+}

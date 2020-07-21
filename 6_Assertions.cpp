@@ -119,14 +119,22 @@ TEST_F(DISABLED_SampleTest, Sample5) {
 //  2) 반복 테스트
 //      $ ./a.out --gtest_repeat=N --gtest_break_on_failure --gtest_shuffle
 
+// 7. Test Result Formatter
+//   : xUnit Test Framework -> XML, JSON
+//      $ ./a.out --test_output=xml|json
+//      => test_details.xml / json에 대해서 추가적인 필드도 생성할 수 있습니다.
+
 // CalcTest.AddTest
 TEST(CalcTest, P_AddTest) {
 	// FAIL();
+	RecordProperty("cpu", 80);
+	RecordProperty("mem", "20%");
 }
 
 // CalcTest.SubTest
 TEST(CalcTest, N_SubTest) {
-
+	RecordProperty("cpu", 10);
+	RecordProperty("mem", "40%");
 }
 
 
