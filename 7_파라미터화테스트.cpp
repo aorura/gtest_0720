@@ -31,7 +31,7 @@ INSTANTIATE_TEST_SUITE_P(PrimeValues, PrimeTest,
 	Values(2, 3, 5, 7, 11, 13, 17, 19));
 
 // 3. 이제 다양한 테스트케이스를 작성하면 됩니다. - TEST_P
-TEST_P(PrimeTest, IsPrime) {
+TEST_P(PrimeTest, IsPrimeTest) {
 	EXPECT_TRUE(IsPrime(GetParam()));
 }
 
