@@ -44,6 +44,47 @@ public:
 
 // 2. Mocking - 모의 객체 생성
 //  - Google Mock에서는 Mocking을 수행하는 스크립트를 제공하고 있습니다.
+//   => $ cd ./googletest/googlemock/scripts/generator/gmock_gen.py
+//      $ ./gmock_gen ~/chansik.yun/DLoggerTarget.h
+class MockDLoggerTarget : public DLoggerTarget {
+public:
+  MOCK_METHOD2(Write,
+      void(Level level, const std::string& message));
+};
+
+// 3. TestCase를 작성해서, 행위 기반 검증을 수행한다.
+TEST(DLoggerTarget, WriteTest) {
+	// Arrange
+	DLogger logger;
+	MockDLoggerTarget mock1, mock2;
+	logger.AddTarget(&mock1);
+	logger.AddTarget(&mock2);
+	Level test_level = INFO;
+	std::string test_message = "test_message";
+	
+	// 주의 사항: Act 단계를 수행하기 전에, 행위 기반 검증을 작성해야 한다. - Google Mock
+	// Assert
+	EXPECT_CALL(mock1, Write(test_level, test_message));
+	EXPECT_CALL(mock2, Write(test_level, test_message));
+
+	// Act
+	logger.Write(test_level, test_message);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

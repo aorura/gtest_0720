@@ -57,6 +57,7 @@ public:
 };
 
 TEST(DLoggerTest, WriteTest) {
+	// Arrange
 	DLogger logger;
 	SpyTarget spy1, spy2;
 	logger.AddTarget(&spy1);
@@ -64,8 +65,10 @@ TEST(DLoggerTest, WriteTest) {
 	Level test_level = INFO;
 	std::string test_message = "test_message";
 
+	// Act
 	logger.Write(test_level, test_message);
 
+	// Assert
 	EXPECT_TRUE(spy1.IsReceived(test_level, test_message));
 	EXPECT_TRUE(spy2.IsReceived(test_level, test_message));
 }
