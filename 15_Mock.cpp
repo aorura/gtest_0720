@@ -38,3 +38,25 @@ public:
 //    모의 객체를 생성하기 위해서는 Mock Framework을 이용해야 합니다.
 //     - Java: jMock, EasyMock, Mockito
 //     - C++: Google Mock
+
+// 1. 헤더 파일 포함
+#include <gmock/gmock.h>
+
+// 2. Mocking - 모의 객체 생성
+//  - Google Mock에서는 Mocking을 수행하는 스크립트를 제공하고 있습니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
