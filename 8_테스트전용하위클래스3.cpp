@@ -1,10 +1,14 @@
 #include <stdio.h>
 
 // SUT
+// 주의 사항
+//  - 테스트 전용 하위 클래스를 작성하고자 하는 SUT가 상속을 할 수 있도록 설계되어야 한다.
+//    1) 가상 소멸자
+//    2) 가상 함수 - Start
 class Engine {
 public:
 	virtual ~Engine() {}
-	virtual void Start() {
+	void Start() override {
 		printf("Engine start...\n");
 	}
 };
