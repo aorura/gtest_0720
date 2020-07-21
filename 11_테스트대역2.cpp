@@ -48,7 +48,6 @@ public:
 	}
 };
 
-
 TEST(LoggerTest, IsValidFilename_NameShorterThan5Chars_ReturnsFalse) {
 	TestDouble stub;
 	Logger logger(&stub);
@@ -64,3 +63,13 @@ TEST(LoggerTest, IsValidFilename_NameLoggerThan5Chars_ReturnsTrue) {
 
 	EXPECT_TRUE(logger.IsValidFilename(validFilename)) << "파일이름이 5글자 이상일때";
 }
+
+// - 참고: Test Double이전에 Mock 이름을 사용하였습니다.
+// Test Double 종류 
+//   : xUnit Test Pattern - 제라드
+//   1) Test Stub
+//   2) Fake Object
+//   3) Test Spy
+//   4) Mock Object
+//
+//   5) Dummy Object - Type
