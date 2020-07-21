@@ -41,6 +41,31 @@ $ g++ main.cpp -lgtest -L. -I. -pthread
   $ ./a.out
 
 ```
+# Google Mock 기반으로 Google Test를 빌드하는 방법
+```
+# gmock-all.o
+$ g++ ./googletest/googlemock/src/gmock-all.cc -c \
+-I./googletest/googlemock/ \
+-I./googletest/googlemock/include \
+-I./googletest/googletest/include
+
+# gmock_main.o
+$ g++ ./googletest/googlemock/src/gmock_main.cc -c \
+-I./googletest/googlemock/include \
+-I./googletest/googletest/include
+
+# gtest-all.o
+$ g++ ./googletest/googletest/src/gtest-all.cc -c \
+-I./googletest/googletest -I./googletest/googletest/include
+
+$ ar rcv libgtest.a gmock-all.o gmock_main.o gtest-all.o
+
+$ g++ main.cpp -lgtest -L. -I./googletest/googlemock/include -I./googletest/googletest/include -pthread
+```
+
+
+
+
 
 
 
