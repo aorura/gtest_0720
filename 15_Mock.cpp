@@ -46,6 +46,7 @@ public:
 //  - Google Mock에서는 Mocking을 수행하는 스크립트를 제공하고 있습니다.
 //   => $ cd ./googletest/googlemock/scripts/generator/gmock_gen.py
 //      $ ./gmock_gen ~/chansik.yun/DLoggerTarget.h
+//      - 위의 스크립트는 더 이상 사용되지 않습니다.
 class MockDLoggerTarget : public DLoggerTarget {
 public:
   MOCK_METHOD2(Write,
@@ -69,35 +70,21 @@ TEST(DLoggerTarget, WriteTest) {
 
 	// Act
 	logger.Write(test_level, test_message);
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//--------------------------------------
+// Test 대역 종류
+// 1. Stub
+//   : 특수한 상황을 시뮬레이션 한다. 협력 객체에 대해서 원하는 결과를 주는 테스트 대역으로 변경해서 사용한다.
+// 2. Fake
+// 	 : 의존 하는 객체가 아직 준비되지 않았을 때, 사용하기 어려울 때, 너무 느려서 느린 테스트의 문제가 발생할 때
+// 	   가벼운 테스트 대역을 작성해서 검증한다.
+//  
+//  "객체에 작용을 가했을 때, 관찰할 수 있는 부수효과가 없어서, 테스트되지 않은 요구 사항이 있다."
+// 3. Spy
+//   => 목격한 일을 기록해두었다가, 테스트에서 검증할 수 있는 기능을 제공하는 테스트 대역
+// 4. Mock
+//   => 모의 객체(함수의 호출에 대한 정보를 기록하는 테스트 대역)를 통해서 행위 기반 검증을 수행한다.
+//
+//  Mock(Test Double) Framework - Google Mock
+//   "행위 기반 검증만을 제공하는 것이 아니라, Stub, Fake를 만드는 데도 활용할 수 있습니다."
