@@ -36,8 +36,6 @@ INSTANTIATE_TEST_SUITE_P(ParamValues, ParamTest,
 	ValuesIn(names));
 #endif
 
-
-
 TEST_P(ParamTest, Sample2) {
 	std::cout << GetParam() << std::endl;
 }
