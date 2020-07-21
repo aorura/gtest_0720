@@ -41,7 +41,7 @@ $ g++ main.cpp -lgtest -L. -I. -pthread
   $ ./a.out
 
 ```
-# Google Mock 기반으로 Google Test를 빌드하는 방법
+# Google Mock 기반으로 Google Test를 빌드하는 방법 - 1
 ```
 # gmock-all.o
 $ g++ ./googletest/googlemock/src/gmock-all.cc -c \
@@ -65,8 +65,21 @@ $ g++ main.cpp -lgtest -L. \
 -I./googletest/googletest/include \
 -pthread
 ```
+# Google Mock 기반으로 Google Test 빌드하는 방법- 2
+```
+$ cd googletest/googlemock/scripts/
+$ ./fuse_gmock_files.py ~/chansik.yun/
+$ cd ~/chansik.yun
 
+# gmock_main.o
+$ g++ ./googletest/googlemock/src/gmock_main.cc -c -I.
 
+# gmock-gtest-all.o
+$ g++ gmock-gtest-all.cc -c -I.
+
+$ ar rcv libgtest.a gmock-gtest-all.o gmock_main.o
+$ g++ main.cpp -lgtest -L. -I. -pthread
+```
 
 
 
