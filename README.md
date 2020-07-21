@@ -60,7 +60,10 @@ $ g++ ./googletest/googletest/src/gtest-all.cc -c \
 
 $ ar rcv libgtest.a gmock-all.o gmock_main.o gtest-all.o
 
-$ g++ main.cpp -lgtest -L. -I./googletest/googlemock/include -I./googletest/googletest/include -pthread
+$ g++ main.cpp -lgtest -L. \
+-I./googletest/googlemock/include \
+-I./googletest/googletest/include \
+-pthread
 ```
 
 
