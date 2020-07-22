@@ -29,9 +29,15 @@ class MockMP3 : public MP3 {
 public:
 	// 템플릿 인자를 가지고 있는 경우
 	// std::pair<bool, int> GetPair() const override {}
-	MOCK_METHOD((std::pair<bool, int>), GetPair, (), (const, override));
+	// MOCK_METHOD((std::pair<bool, int>), GetPair, (), (const, override));
+	// MOCK_METHOD(bool, CheckMap, ((std::map<int, double> a), bool b), (override));
+	
+	using BoolAndInt = std::pair<bool, int>;
+	MOCK_METHOD(BoolAndInt, GetPair, (), (const, override));
 
-	MOCK_METHOD(bool, CheckMap, ((std::map<int, double> a), bool b), (override));
+	using MapIntDouble = std::map<int, double>;
+	MOCK_METHOD(bool, CheckMap, (MapIntDouble a, bool b), (override));
+
 
 	// 일반적인 방법.
 	// void Play() override {}
