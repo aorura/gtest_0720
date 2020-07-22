@@ -53,12 +53,3 @@ int main() {
 	reader.ReadPacket(&stream, 42);
 }
 #endif
-
-
-
-
-
-
-
-
-
