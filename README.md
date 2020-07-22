@@ -80,10 +80,3 @@ $ g++ gmock-gtest-all.cc -c -I.
 $ ar rcv libgtest.a gmock-gtest-all.o gmock_main.o
 $ g++ main.cpp -lgtest -L. -I. -pthread
 ```
-
-
-
-
-
-
-

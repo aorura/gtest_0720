@@ -6,6 +6,10 @@
 
 #include <gtest/gtest.h>
 
+// new의 동작
+//  1) 메모리 할당 - operator new
+//  2) 할당된 메모리 대상으로 생성자가 호출
+
 class Image {
 public:
 	Image() { printf("Image()\n"); }

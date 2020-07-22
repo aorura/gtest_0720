@@ -27,6 +27,7 @@ INSTANTIATE_TEST_SUITE_P(AnimalVariations, AnimalTest,
 
 TEST_P(AnimalTest, AnimalLookAndFeel) {
 	std::tuple<const char*, Color> v = GetParam();
+	// auto v = GetParam();
 	
 	const char* animal = std::get<0>(v);
 	Color c = std::get<1>(v);

@@ -8,7 +8,7 @@
 class Engine {
 public:
 	virtual ~Engine() {}
-	void Start() override {
+	virtual void Start() {
 		printf("Engine start...\n");
 	}
 };

@@ -63,9 +63,9 @@ int main(int argc, char** argv) {
 	
 	if (check_for_leaks) {
 		// 기본 출력 형식을 제거하는 것도 가능합니다.
-		// testing::TestEventListeners& listeners = testing::UnitTest::GetInstance()->listeners();
+		testing::TestEventListeners& listeners = testing::UnitTest::GetInstance()->listeners();
 		// listeners.Release(listeners.default_result_printer());
-
+ 
 		listeners.Append(new MyTestListener);
 	}
 
