@@ -14,8 +14,8 @@ struct Foo {
 class User {
 public:
 	void UseFoo(Foo* p) {
-		p->Say("Hello");
-		p->Do();  // !!
+		// p->Say("Hello");
+		// p->Do();  // !!
 	}
 };
 
@@ -44,7 +44,36 @@ using testing::NaggyMock;
 using testing::NiceMock;
 using testing::StrictMock;
 
-TEST(UserTest, UseFooTest) {
+class UserTest : public testing::Test {
+protected:
+	User user;
+	NiceMock<MockFoo> mock;
+
+	void SetUp() override {
+
+	}
+
+	void TearDown() override {
+
+	}
+};
+
+TEST_F(UserTest, DISABLED_UseFooTest) {
+	EXPECT_CALL(mock, Say("Hello"));
+
+	user.UseFoo(&mock);
+}
+
+TEST_F(UserTest, UserFooTest2) {
+	EXPECT_CALL(mock, Say("Hello"));
+
+	user.UseFoo(&mock);
+	ASSERT_EQ(1, 2);
+}
+
+
+#if 0
+TEST(UserTest, DISABLED_UseFooTest) {
 	StrictMock<MockFoo> mock;
 	User user;
 
@@ -52,3 +81,33 @@ TEST(UserTest, UseFooTest) {
 
 	user.UseFoo(&mock);
 }
+
+
+// * Google Mock은 mock객체가 파괴되는 시점에 검증을 수행한다.
+
+TEST(UserTest, UserFooTest2) {
+	MockFoo mock;
+	// MockFoo* mock = new MockFoo;
+	User user;
+
+	EXPECT_CALL(mock, Say("Hello"));
+
+	user.UseFoo(&mock);
+	ASSERT_EQ(1, 2);
+
+	// delete mock;  // !!!
+}
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
