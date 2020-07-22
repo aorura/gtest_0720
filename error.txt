@@ -1,0 +1,522 @@
+In file included from 16_Mocking.cpp:2:0:
+./gmock/gmock.h:9726:3: error: static assertion failed: This method does not take 3 arguments. Parenthesize all types with unproctected commas.
+   static_assert(                                                       \
+   ^
+./gmock/gmock.h:9690:3: note: in expansion of macro ‘GMOCK_INTERNAL_ASSERT_VALID_SIGNATURE’
+   GMOCK_INTERNAL_ASSERT_VALID_SIGNATURE(                                      \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:8728:71: error: ‘type’ in ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Arg<2> {aka struct testing::internal::ElemFromList<2, testing::internal::IndexSequence<0, 1>, std::map<int, double, std::less<int>, std::allocator<std::pair<const int, double> > >, bool>}’ does not name a type
+     tn ::testing::internal::Function<__VA_ARGS__>::template Arg<N-1>::type
+                                                                       ^
+./gmock/gmock.h:9881:44: note: in expansion of macro ‘GMOCK_ARG_’
+ #define GMOCK_INTERNAL_ARG_O(_tn, _i, ...) GMOCK_ARG_(_tn, _i, __VA_ARGS__)
+                                            ^~~~~~~~~~
+./gmock/gmock.h:9856:3: note: in expansion of macro ‘GMOCK_INTERNAL_ARG_O’
+   GMOCK_INTERNAL_ARG_O(typename, GMOCK_PP_INC(_i),         \
+   ^~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_PARAMETER’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9741:19: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+       _MethodName(GMOCK_PP_REPEAT(GMOCK_INTERNAL_PARAMETER, _Signature, _N))   \
+                   ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:8728:71: error: ‘type’ in ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Arg<2> {aka struct testing::internal::ElemFromList<2, testing::internal::IndexSequence<0, 1>, std::map<int, double, std::less<int>, std::allocator<std::pair<const int, double> > >, bool>}’ does not name a type
+     tn ::testing::internal::Function<__VA_ARGS__>::template Arg<N-1>::type
+                                                                       ^
+./gmock/gmock.h:8733:30: note: in expansion of macro ‘GMOCK_ARG_’
+     const ::testing::Matcher<GMOCK_ARG_(tn, N, __VA_ARGS__)>&
+                              ^~~~~~~~~~
+./gmock/gmock.h:9884:3: note: in expansion of macro ‘GMOCK_MATCHER_’
+   GMOCK_MATCHER_(_tn, _i, __VA_ARGS__)
+   ^~~~~~~~~~~~~~
+./gmock/gmock.h:9868:3: note: in expansion of macro ‘GMOCK_INTERNAL_MATCHER_O’
+   GMOCK_INTERNAL_MATCHER_O(typename, GMOCK_PP_INC(_i),         \
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_MATCHER_PARAMETER’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9751:7: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+       GMOCK_PP_REPEAT(GMOCK_INTERNAL_MATCHER_PARAMETER, _Signature, _N))       \
+       ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:8733:60: error: template argument 1 is invalid
+     const ::testing::Matcher<GMOCK_ARG_(tn, N, __VA_ARGS__)>&
+                                                            ^
+./gmock/gmock.h:9884:3: note: in expansion of macro ‘GMOCK_MATCHER_’
+   GMOCK_MATCHER_(_tn, _i, __VA_ARGS__)
+   ^~~~~~~~~~~~~~
+./gmock/gmock.h:9868:3: note: in expansion of macro ‘GMOCK_INTERNAL_MATCHER_O’
+   GMOCK_INTERNAL_MATCHER_O(typename, GMOCK_PP_INC(_i),         \
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_MATCHER_PARAMETER’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9751:7: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+       GMOCK_PP_REPEAT(GMOCK_INTERNAL_MATCHER_PARAMETER, _Signature, _N))       \
+       ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+16_Mocking.cpp:34:20: error: ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Result MockMP3::CheckMap(testing::internal::ElemFromListImpl<std::map<int, double>, 0, 0>::type, testing::internal::ElemFromListImpl<bool, 1, 1>::type, int)’ marked ‘override’, but does not override
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+                    ^
+./gmock/gmock.h:9741:7: note: in definition of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+       _MethodName(GMOCK_PP_REPEAT(GMOCK_INTERNAL_PARAMETER, _Signature, _N))   \
+       ^~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+16_Mocking.cpp: In member function ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Result MockMP3::CheckMap(testing::internal::ElemFromListImpl<std::map<int, double>, 0, 0>::type, testing::internal::ElemFromListImpl<bool, 1, 1>::type, int)’:
+./gmock/gmock.h:8728:71: error: ‘type’ in ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Arg<2> {aka struct testing::internal::ElemFromList<2, testing::internal::IndexSequence<0, 1>, std::map<int, double, std::less<int>, std::allocator<std::pair<const int, double> > >, bool>}’ does not name a type
+     tn ::testing::internal::Function<__VA_ARGS__>::template Arg<N-1>::type
+                                                                       ^
+./gmock/gmock.h:9881:44: note: in expansion of macro ‘GMOCK_ARG_’
+ #define GMOCK_INTERNAL_ARG_O(_tn, _i, ...) GMOCK_ARG_(_tn, _i, __VA_ARGS__)
+                                            ^~~~~~~~~~
+./gmock/gmock.h:9862:18: note: in expansion of macro ‘GMOCK_INTERNAL_ARG_O’
+   ::std::forward<GMOCK_INTERNAL_ARG_O(typename, GMOCK_PP_INC(_i),           \
+                  ^~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_FORWARD_ARG’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9748:17: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         .Invoke(GMOCK_PP_REPEAT(GMOCK_INTERNAL_FORWARD_ARG, _Signature, _N));  \
+                 ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:9864:18: error: no matching function for call to ‘forward<<expression error> >(int&)’
+       gmock_a##_i)
+                  ^
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_FORWARD_ARG’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9748:17: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         .Invoke(GMOCK_PP_REPEAT(GMOCK_INTERNAL_FORWARD_ARG, _Signature, _N));  \
+                 ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+In file included from /usr/include/c++/7/bits/stl_pair.h:59:0,
+                 from /usr/include/c++/7/utility:70,
+                 from /usr/include/c++/7/algorithm:60,
+                 from ./gmock/gmock.h:102,
+                 from 16_Mocking.cpp:2:
+/usr/include/c++/7/bits/move.h:73:5: note: candidate: template<class _Tp> constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&)
+     forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+     ^~~~~~~
+/usr/include/c++/7/bits/move.h:73:5: note:   template argument deduction/substitution failed:
+In file included from 16_Mocking.cpp:2:0:
+./gmock/gmock.h:9864:18: error: template argument 1 is invalid
+       gmock_a##_i)
+                  ^
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_FORWARD_ARG’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9748:17: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         .Invoke(GMOCK_PP_REPEAT(GMOCK_INTERNAL_FORWARD_ARG, _Signature, _N));  \
+                 ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+In file included from /usr/include/c++/7/bits/stl_pair.h:59:0,
+                 from /usr/include/c++/7/utility:70,
+                 from /usr/include/c++/7/algorithm:60,
+                 from ./gmock/gmock.h:102,
+                 from 16_Mocking.cpp:2:
+/usr/include/c++/7/bits/move.h:84:5: note: candidate: template<class _Tp> constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&&)
+     forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
+     ^~~~~~~
+/usr/include/c++/7/bits/move.h:84:5: note:   template argument deduction/substitution failed:
+In file included from 16_Mocking.cpp:2:0:
+./gmock/gmock.h:9864:18: error: template argument 1 is invalid
+       gmock_a##_i)
+                  ^
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_FORWARD_ARG’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9748:17: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         .Invoke(GMOCK_PP_REPEAT(GMOCK_INTERNAL_FORWARD_ARG, _Signature, _N));  \
+                 ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+16_Mocking.cpp: In member function ‘testing::internal::MockSpec<bool(std::map<int, double>, bool)> MockMP3::gmock_CheckMap(const testing::Matcher<std::map<int, double> >&, const testing::Matcher<bool>&, const int&)’:
+./gmock/gmock.h:9755:69: error: no matching function for call to ‘testing::internal::FunctionMocker<bool(std::map<int, double>, bool)>::With(const testing::Matcher<std::map<int, double> >&, const testing::Matcher<bool>&, const int&)’
+         .With(GMOCK_PP_REPEAT(GMOCK_INTERNAL_MATCHER_ARGUMENT, , _N));         \
+                                                                     ^
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:8271:15: note: candidate: testing::internal::MockSpec<R(Args ...)> testing::internal::FunctionMocker<R(Args ...)>::With(testing::Matcher<Args>...) [with R = bool; Args = {std::map<int, double, std::less<int>, std::allocator<std::pair<const int, double> > >, bool}]
+   MockSpec<F> With(Matcher<Args>... m) {
+               ^~~~
+./gmock/gmock.h:8271:15: note:   candidate expects 2 arguments, 3 provided
+16_Mocking.cpp: In member function ‘testing::internal::MockSpec<bool(std::map<int, double>, bool)> MockMP3::gmock_CheckMap(const testing::internal::WithoutMatchers&, testing::internal::Function<bool(std::map<int, double>, bool)>*) const’:
+./gmock/gmock.h:8728:71: error: ‘type’ in ‘testing::internal::Function<bool(std::map<int, double>, bool)>::Arg<2> {aka struct testing::internal::ElemFromList<2, testing::internal::IndexSequence<0, 1>, std::map<int, double, std::less<int>, std::allocator<std::pair<const int, double> > >, bool>}’ does not name a type
+     tn ::testing::internal::Function<__VA_ARGS__>::template Arg<N-1>::type
+                                                                       ^
+./gmock/gmock.h:9881:44: note: in expansion of macro ‘GMOCK_ARG_’
+ #define GMOCK_INTERNAL_ARG_O(_tn, _i, ...) GMOCK_ARG_(_tn, _i, __VA_ARGS__)
+                                            ^~~~~~~~~~
+./gmock/gmock.h:9878:16: note: in expansion of macro ‘GMOCK_INTERNAL_ARG_O’
+   ::testing::A<GMOCK_INTERNAL_ARG_O(typename, GMOCK_PP_INC(_i), \
+                ^~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_A_MATCHER_ARGUMENT’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9764:31: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         ->gmock_##_MethodName(GMOCK_PP_REPEAT(                                 \
+                               ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:9879:74: error: no matching function for call to ‘A<<expression error> >()’
+                                     GMOCK_PP_REMOVE_PARENS(_Signature))>()
+                                                                          ^
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_A_MATCHER_ARGUMENT’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9764:31: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         ->gmock_##_MethodName(GMOCK_PP_REPEAT(                                 \
+                               ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+./gmock/gmock.h:5737:19: note: candidate: template<class T> testing::Matcher<T> testing::A()
+ inline Matcher<T> A() {
+                   ^
+./gmock/gmock.h:5737:19: note:   template argument deduction/substitution failed:
+./gmock/gmock.h:9879:74: error: template argument 1 is invalid
+                                     GMOCK_PP_REMOVE_PARENS(_Signature))>()
+                                                                          ^
+./gmock/gmock.h:9612:3: note: in expansion of macro ‘GMOCK_INTERNAL_A_MATCHER_ARGUMENT’
+   _Macro(_i, _Data, _element)
+   ^~~~~~
+./gmock/gmock.h:9615:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CALL_MACRO’
+   GMOCK_PP_INTERNAL_CALL_MACRO(_Macro, _i, _Data, GMOCK_PP_HEAD _Tuple)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9618:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_1(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9622:3: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2’
+   GMOCK_PP_INTERNAL_FOR_EACH_IMPL_2(GMOCK_PP_INC(_i), _Macro, _Data,    \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_PP_INTERNAL_FOR_EACH_IMPL_3’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9764:31: note: in expansion of macro ‘GMOCK_PP_REPEAT’
+         ->gmock_##_MethodName(GMOCK_PP_REPEAT(                                 \
+                               ^~~~~~~~~~~~~~~
+./gmock/gmock.h:9693:3: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_IMPL’
+   GMOCK_INTERNAL_MOCK_METHOD_IMPL(                                            \
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9536:39: note: in expansion of macro ‘GMOCK_INTERNAL_MOCK_METHOD_ARG_4’
+ #define GMOCK_PP_INTERNAL_CAT(_1, _2) _1##_2
+                                       ^~
+./gmock/gmock.h:9374:30: note: in expansion of macro ‘GMOCK_PP_INTERNAL_CAT’
+ #define GMOCK_PP_CAT(_1, _2) GMOCK_PP_INTERNAL_CAT(_1, _2)
+                              ^~~~~~~~~~~~~~~~~~~~~
+./gmock/gmock.h:9438:3: note: in expansion of macro ‘GMOCK_PP_CAT’
+   GMOCK_PP_CAT(_Macro, GMOCK_PP_NARG(__VA_ARGS__))(__VA_ARGS__)
+   ^~~~~~~~~~~~
+./gmock/gmock.h:9676:3: note: in expansion of macro ‘GMOCK_PP_VARIADIC_CALL’
+   GMOCK_PP_VARIADIC_CALL(GMOCK_INTERNAL_MOCK_METHOD_ARG_, __VA_ARGS__)
+   ^~~~~~~~~~~~~~~~~~~~~~
+16_Mocking.cpp:34:2: note: in expansion of macro ‘MOCK_METHOD’
+  MOCK_METHOD(bool, CheckMap, (std::map<int, double> a, bool b), (override));
+  ^~~~~~~~~~~
+16_Mocking.cpp: In member function ‘virtual void MP3Test_MockTest_Test::TestBody()’:
+16_Mocking.cpp:64:10: error: cannot declare variable ‘mock’ to be of abstract type ‘MockMP3’
+  MockMP3 mock;
+          ^~~~
+16_Mocking.cpp:28:7: note:   because the following virtual functions are pure within ‘MockMP3’:
+ class MockMP3 : public MP3 {
+       ^~~~~~~
+16_Mocking.cpp:15:15: note: 	virtual bool MP3::CheckMap(std::map<int, double>, bool)
+  virtual bool CheckMap(std::map<int, double> a, bool b) = 0;
+               ^~~~~~~~
