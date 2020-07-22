@@ -2,7 +2,7 @@
 // Mock Object Pattern
 //  => 행위 기반 검증
 //    1) 메소드 호출 여부 
-//    2) 메소드 호출 횟수
+//    2) 메소드 호출 횟수 / 인자 검증
 //    3) 메소드 호출 순서
 //
 //  => 테스트 대역 프레임워크
@@ -46,8 +46,12 @@ TEST(UserTest, DoTest1) {
 //      => N - N번 호출 검증
 //         AtLeast(N) - N번 이상
 //         AtMost(N) - N번 이하
+//          - Cardinality
 using testing::AtLeast;
 using testing::AtMost;
+using testing::AnyNumber;
+using testing::Between;
+//  - Between(1, 3)
 
 // 3. 호출 인자 검증 - Matching 결과에 따라서, 호출 횟수에 대한 조정이 필요하다.
 //   * Matcher
@@ -84,7 +88,6 @@ TEST(UserTest, DoTest3) {
 	// EXPECT_CALL(mock, Say(HasSubstr("Hello"))).Times(AtLeast(2));
 	EXPECT_CALL(mock, Say(StartsWith("Hello"))).Times(AtLeast(2));
 
-
 	// Add의 첫번째 인자 조건: 0 < a && a <= 30
 	//       두번째 인자 조건: a > 10 || a < 5
 	auto firstMatcher = AllOf(Gt(0), Le(30));
@@ -117,6 +120,70 @@ TEST(UserTest, DISABLED_DoTest2) {
 	EXPECT_CALL(mock, Say("Hello")).Times(AtLeast(3));
 
 	Do2(&mock);
+}
+
+struct Foo {
+	virtual ~Foo() {}
+
+	virtual void First() {}
+	virtual void Second() {}
+	virtual void Third() {}
+	virtual void Forth() {}
+};
+
+class MockFoo : public Foo {
+public:
+	MOCK_METHOD(void, First, (), (override));
+	MOCK_METHOD(void, Second, (), (override));
+	MOCK_METHOD(void, Third, (), (override));
+	MOCK_METHOD(void, Forth, (), (override));
+};
+
+void Do3(Foo* p) { 
+	p->First();
+	p->Second();
+	p->Forth();
+
+	p->Third();
+}
+
+// 메소드 호출 순서
+//   - EXPECT_CALL은 기본적으로 순서를 검증하고 있지 않습니다.
+//   1) InSequence 객체
+using testing::InSequence;
+using testing::Sequence;
+
+//   2) Sequence 객체
+//		   - Third            :s1
+//         |
+// First --
+//         |
+//         - Second - Forth  :s2
+
+TEST(FooTest, DoTest5) {
+	Sequence s1, s2;
+	MockFoo mock;
+
+	EXPECT_CALL(mock, First()).InSequence(s1, s2);
+	EXPECT_CALL(mock, Third()).InSequence(s1);
+	EXPECT_CALL(mock, Second()).InSequence(s2);
+	EXPECT_CALL(mock, Forth()).InSequence(s2);
+
+	Do3(&mock);
+}
+
+
+// First -> Second -> Third -> Forth
+TEST(FooTest, DoTest4) {
+	InSequence seq;
+	MockFoo mock;
+
+	EXPECT_CALL(mock, First());
+	EXPECT_CALL(mock, Second());
+	EXPECT_CALL(mock, Third());
+	EXPECT_CALL(mock, Forth());
+
+	Do3(&mock);
 }
 
 
