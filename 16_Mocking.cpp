@@ -28,6 +28,8 @@ struct MP3 {
 class MockMP3 : public MP3 {
 public:
 	// 템플릿 인자를 가지고 있는 경우
+	//  - 반환 타입 또는 인자 타입에 템플릿 인자가 2개 이상인 경우, 괄호를 통해 감싸주거나 또는 타입 재정의를 통해 
+	//    해결할 수 있다.
 	// std::pair<bool, int> GetPair() const override {}
 	// MOCK_METHOD((std::pair<bool, int>), GetPair, (), (const, override));
 	// MOCK_METHOD(bool, CheckMap, ((std::map<int, double> a), bool b), (override));
